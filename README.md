@@ -3,7 +3,7 @@
 ##### To  open: 
  1. Make sure the lastest verison of "Visual Studio is installed"
  2. Make sure SQLLocaldb is installed on local machine
-   1. This can be checked through going to "CMD" and typing "SQLLocaldb"
+    A. This can be checked through going to "CMD" and typing "SQLLocaldb"
  3. Click **"ToDo.sln"** to open in Visual Studio(VS)
  4. Once loaded into Visual Studio, Click the green play arrow near the top middle of VS
 ##### Known Issues:
