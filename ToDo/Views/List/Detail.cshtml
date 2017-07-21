@@ -1,0 +1,53 @@
+﻿@model ToDo.Models.List
+
+@{
+    ViewBag.Title = "List Detail";
+}
+
+@Html.Partial("_Message")
+
+<h2>@Model.Title</h2>
+
+@if (!string.IsNullOrWhiteSpace(Model.Description))
+{
+    <p>@Model.Description</p>
+}
+
+<h3>Tasks</h3>
+
+@if (Model.Tasks.Count > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Tasks</th>
+                <th>Completed On</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in Model.Tasks)
+            {
+                <tr>
+                    <td>@task.DisplayText</td>
+                    <td>@task.CompletedOn.ToString("MM/dd/yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>This series doesn't contain any comic books.</p>
+}
+
+<div class="pad-top">
+    <a href="@Url.Action("Edit", new { id = Model.Id })" class="btn btn-primary btn-lg margin-right">
+        <span class="glyphicon glyphicon-edit"></span> Edit
+    </a>
+    <a href="@Url.Action("Delete", new { id = Model.Id })" class="btn btn-danger btn-lg margin-right">
+        <span class="glyphicon glyphicon-trash"></span> Delete
+    </a>
+    <a href="@Url.Action("Index")" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-step-backward"></span> Back
+    </a>
+</div>

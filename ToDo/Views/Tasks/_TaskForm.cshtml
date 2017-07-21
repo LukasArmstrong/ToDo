@@ -1,0 +1,34 @@
+﻿@model ToDo.ViewModels.TasksBaseViewModel
+
+<div class="row">
+
+    <div class="col-md-6">
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Task.SeriesId, new { @class = "control-label" })
+            @Html.DropDownListFor(m => m.Task.SeriesId,
+            Model.ListSelectListItems, "", new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Task.OrderNumber, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.Task.OrderNumber, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Task.CompletedOn, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.Task.CompletedOn, "{0:d}", new { @class = "form-control datepicker" })
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Task.Description, new { @class = "control-label" })
+            @Html.TextAreaFor(m => m.Task.Description, 14, 20, new { @class = "form-control" })
+        </div>
+
+    </div>
+
+</div>

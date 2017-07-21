@@ -1,0 +1,27 @@
+﻿
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #343434;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.margin-right {
+    margin-right: 5px !important;
+}
+
+.pad-top {
+    padding-top: 20px;
+}
+
+.pad-bottom {
+    padding-bottom: 20px;
+}
+
+.validation-summary-valid {
+    display: none;
+}
