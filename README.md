@@ -1,5 +1,7 @@
 # ToDo
 ## Project for Code Louisville's C#/.Net Course
+##### Basic Description:
+This is a super simple todo manager than still needs a lot of work.
 ##### To  open: 
  1. Make sure the lastest verison of "Visual Studio is installed"
  2. Make sure SQLLocaldb is installed on local machine
